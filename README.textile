@@ -1,0 +1,25 @@
+h1. Rule of Thirds
+
+Evaluates data from the Peekaboom game, created by "Luis von Ahn":http://en.wikipedia.org/wiki/Luis_von_Ahn, and produces belief values for an object being placed in an image in accordance with the "rule of thirds":http://en.wikipedia.org/wiki/Rule_of_thirds.
+
+Written in Python by James MacAulay and Jessica Cockbain, for "CGSC 4001":http://www.carleton.ca/calendars/ugrad/0910/courses/CGSC/4001.html at "Carleton University":http://www.carleton.ca/, taught by "Dr. Jim Davies":http://jimdavies.org/.
+
+h2. Usage
+
+Output the Photographer's evaluation of the provided test images with:
+
+<pre><code>
+  python evaluateTestData.py
+</code></pre>
+
+Run the tests with:
+
+<pre><code>
+  python runtests.py
+</code></pre>
+
+h2. Legal
+
+This project uses the "euclid library":http://partiallydisassembled.net/euclid.html for geometry, which is licensed under the "LGPL":http://www.gnu.org/copyleft/lesser.html.
+
+The rest is original work and is copyright 2009 by James MacAulay and Jessica Cockbain.
