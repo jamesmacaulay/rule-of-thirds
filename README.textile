@@ -8,15 +8,15 @@ h2. Usage
 
 Output the Photographer's evaluation of the provided test images with:
 
-<pre><code>
+<pre>
   python evaluateTestData.py
-</code></pre>
+</pre>
 
 Run the tests with:
 
-<pre><code>
+<pre>
   python runtests.py
-</code></pre>
+</pre>
 
 h2. Legal
 
