@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>PeekaboomRound</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:../PeekaboomRound.py">PeekaboomRound.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:../PeekaboomRound.py">../PeekaboomRound.py</a></font></td></tr></table>
     <p></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -38,7 +38,11 @@
 <font color="#000000" face="helvetica, arial"><a name="PeekaboomRound">class <strong>PeekaboomRound</strong></a></font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt>represents&nbsp;one&nbsp;round&nbsp;of&nbsp;play:&nbsp;an&nbsp;exchange&nbsp;between&nbsp;a&nbsp;peek&nbsp;player&nbsp;and&nbsp;a&nbsp;boom&nbsp;player&nbsp;concerning&nbsp;a&nbsp;single&nbsp;object<br>&nbsp;</tt></td></tr>
+<td colspan=2><tt>Represents&nbsp;one&nbsp;round&nbsp;of&nbsp;play:&nbsp;an&nbsp;exchange&nbsp;between&nbsp;a&nbsp;peek&nbsp;player&nbsp;and&nbsp;a&nbsp;boom&nbsp;player&nbsp;concerning&nbsp;a&nbsp;single&nbsp;object.&nbsp;A&nbsp;<a href="#PeekaboomRound">PeekaboomRound</a>&nbsp;is&nbsp;initialized&nbsp;with&nbsp;one&nbsp;line&nbsp;of&nbsp;data&nbsp;from&nbsp;a&nbsp;.pkb&nbsp;file.&nbsp;The&nbsp;initializer&nbsp;parses&nbsp;the&nbsp;line&nbsp;and&nbsp;assigns&nbsp;properties&nbsp;to&nbsp;the&nbsp;<a href="#PeekaboomRound">PeekaboomRound</a>&nbsp;instance&nbsp;accordingly.<br>
+&nbsp;<br>
+Events&nbsp;are&nbsp;stored&nbsp;as&nbsp;PeekaboomEvents,&nbsp;and&nbsp;blob&nbsp;events&nbsp;can&nbsp;be&nbsp;accessed&nbsp;independently&nbsp;with&nbsp;the&nbsp;<a href="#PeekaboomRound-blobs">blobs</a>()&nbsp;method.&nbsp;The&nbsp;Point2&nbsp;objects&nbsp;(from&nbsp;the&nbsp;euclid&nbsp;module)&nbsp;associated&nbsp;with&nbsp;those&nbsp;blob&nbsp;events&nbsp;can&nbsp;be&nbsp;accessed&nbsp;with&nbsp;<a href="#PeekaboomRound-blobPoints">blobPoints</a>(),&nbsp;and&nbsp;a&nbsp;PointCluster&nbsp;object&nbsp;can&nbsp;be&nbsp;generated&nbsp;from&nbsp;those&nbsp;points&nbsp;with&nbsp;the&nbsp;<a href="#PeekaboomRound-cluster">cluster</a>()&nbsp;method.<br>
+&nbsp;<br>
+The&nbsp;<a href="#PeekaboomRound-merge">merge</a>()&nbsp;method&nbsp;is&nbsp;used&nbsp;to&nbsp;non-destructively&nbsp;join&nbsp;multiple&nbsp;<a href="#PeekaboomRound">PeekaboomRound</a>&nbsp;objects&nbsp;into&nbsp;a&nbsp;single&nbsp;object.&nbsp;The&nbsp;resulting&nbsp;object&nbsp;ends&nbsp;up&nbsp;representing&nbsp;the&nbsp;events&nbsp;from&nbsp;multiple&nbsp;rounds&nbsp;of&nbsp;play&nbsp;and&nbsp;is&nbsp;useful&nbsp;for&nbsp;initializing&nbsp;a&nbsp;Photographer&nbsp;object&nbsp;with&nbsp;all&nbsp;the&nbsp;data&nbsp;for&nbsp;a&nbsp;particular&nbsp;label&nbsp;in&nbsp;an&nbsp;image.<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="PeekaboomRound-__init__"><strong>__init__</strong></a>(self, data)</dt><dd><tt>takes&nbsp;a&nbsp;single&nbsp;line&nbsp;from&nbsp;a&nbsp;.pkb&nbsp;file</tt></dd></dl>

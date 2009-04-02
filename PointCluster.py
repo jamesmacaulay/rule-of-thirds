@@ -1,7 +1,9 @@
 from euclid import *
 
 class PointCluster(list):
-  """a special list type for Point2s"""
+  """
+    This is a special list type for Point2 objects from the euclid module. It is a subclass of the built-in Python list class, with accessor methods for geometric values useful for the Photographer.
+  """
 
   def centre(self):
     """returns this cluster's average/centre point as a new Point2"""
