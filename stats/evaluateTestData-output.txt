@@ -1,0 +1,195 @@
+imageID: 0a2d49f7887f2efb04fd66a74ecd0857
+ *www: 0.764902927781
+  pot: 0.0
+ *about: 0.19783351838
+ *informing: 0.0
+  cannabis: 0.0
+  words: 0.0
+  public: 0.0
+  average for this image's primary objects: 0.32091214872
+  average for all of this image's objects:  0.137533778023
+
+imageID: 0a4dcfa22e7bbc76d8ab9df9c7eac802
+ *cord: 0.0919334287578
+  wire: 0.0
+  tool: 0.590223240023
+  wood: 0.0
+ *dank: 0.148873253854
+  iron: 0.18596507233
+  table: 0.0
+ *solder: 0.0
+  average for this image's primary objects: 0.0802688942038
+  average for all of this image's objects:  0.127124374371
+
+imageID: 0a3fe67dfd95718e966676b4d0e86f26
+  school: 0.356086674454
+  group: 0.0
+ *people: 0.0
+  students: 0.0
+  chalk: 0.0
+  chalkboard: 0.0
+ *table: 0.0825295127139
+  class: 0.0
+ *board: 0.145107995038
+  average for this image's primary objects: 0.0758791692505
+  average for all of this image's objects:  0.0648582424673
+
+imageID: 0a0ddc9321171986268339dd743ceb16
+  drink: 0.0
+  people: 0.0
+  men: 0.0870242502325
+ *stripes: 0.0
+ *beer: 0.0
+ *hat: 0.0
+  man: 0.787107485552
+  average for this image's primary objects: 0.0
+  average for all of this image's objects:  0.124875962255
+
+imageID: 0a4ee16a51eefcf055df320779c933c3
+ *tree: 0.189994591978
+ *mountain: 0.929274541236
+  sky: 0.0578726963698
+  rider: 0.0617698013849
+ *man: 0.225257669896
+  average for this image's primary objects: 0.448175601037
+  average for all of this image's objects:  0.292833860173
+
+imageID: 0a0f44216768c5d0b3754f032a2d22ef
+  cyclist: 0.480725642388
+ *helmet: 0.302107869473
+  woman: 0.393522363546
+ *door: 0.0
+  car: 0.0
+  bend: 0.0
+ *tyre: 0.0
+  average for this image's primary objects: 0.100702623158
+  average for all of this image's objects:  0.168050839344
+
+imageID: 0a4a4f0b7152a955d2c0a0c17253be8e
+  floor: 0.0
+  house: 0.0
+ *stove: 0.0
+  wood: 0.0
+ *table: 0.0
+ *chair: 0.943403244057
+  kitchen: 0.0
+  average for this image's primary objects: 0.314467748019
+  average for all of this image's objects:  0.134771892008
+
+imageID: 0a4e29ff30052c2ab7896d9b82732600
+  graph: 0.0
+  chart: 0.0
+  diagram: 0.212254535112
+ *cloning: 0.0
+ *of: 0.0
+ *sequencing: 0.0
+  cycle: 0.400664503703
+  average for this image's primary objects: 0.0
+  average for all of this image's objects:  0.0875598626878
+
+imageID: 0a2c57e1832e588b5f8f8f74aa28cbfa
+  building: 0.0
+  dirt: 0.0
+  house: 0.0
+  tree: 0.0407430462054
+ *trees: 0.0
+ *barn: 0.0
+ *ground: 0.00758474660893
+  average for this image's primary objects: 0.00252824886964
+  average for all of this image's objects:  0.00690397040205
+
+imageID: 0a0a5415f77f3cc0177278c9a4401661
+  water: 0.0578963962676
+ *sun: 0.0
+ *sharks: 0.29318773184
+ *ocean: 0.0
+  average for this image's primary objects: 0.0977292439467
+  average for all of this image's objects:  0.087771032027
+
+imageID: 0a2cedef87bec3e2c6689060d3e60975
+  school: 0.0
+ *backpack: 0.0
+  sack: 0.0
+ *strap: 0.0
+  bag: 0.0
+ *zipper: 0.0
+  average for this image's primary objects: 0.0
+  average for all of this image's objects:  0.0
+
+imageID: 0a4a9d430881d427051763155dc6e012
+  credit: 0.0
+  silver: 0.0
+ *card: 0.0
+ *select: 0.0
+ *details: 0.0
+  average for this image's primary objects: 0.0
+  average for all of this image's objects:  0.0
+
+imageID: 0a0d787ea3337cf2f2ab3b3dbcd7563d
+ *mountain: 0.0
+ *hat: 0.114035664358
+  snow: 0.0
+ *man: 0.0
+  average for this image's primary objects: 0.0380118881193
+  average for all of this image's objects:  0.0285089160895
+
+imageID: 00a1ae2f78248a1e45ddea384fcf00c0
+ *sheep: 0.0
+ *flower: 0.0
+  drawing: 0.0
+  comic: 0.0
+ *man: 0.514061514506
+  average for this image's primary objects: 0.171353838169
+  average for all of this image's objects:  0.102812302901
+
+imageID: 0a0dea2f7dd115bff340fb7b35c6916a
+ *sun: 0.0
+ *tree: 0.0
+  ocean: 0.191967598969
+ *water: 0.141487151145
+  sunset: 0.0
+  average for this image's primary objects: 0.047162383715
+  average for all of this image's objects:  0.0666909500229
+
+imageID: 0a4ffff02e288008a2cafe68ddaddb58
+ *to: 0.0
+ *the: 0.0
+ *come: 0.0
+  average for this image's primary objects: 0.0
+  average for all of this image's objects:  0.0
+
+imageID: 0a1b267be01fc932f5a98f76211c0e97
+  clouds: 0.0
+ *people: 0.0335325388045
+  sky: 0.0
+ *umbrella: 0.0
+ *art: 0.292435559975
+  beach: 0.256291470192
+  average for this image's primary objects: 0.108656032927
+  average for all of this image's objects:  0.0970432614953
+
+imageID: 0a3d2c31faa6e4ea97b4cc3aaaca3256
+ *clouds: 0.345497809028
+ *mountain: 0.0
+ *sky: 0.55683796984
+  hill: 0.0
+  photo: 0.0
+  cloud: 0.389295725983
+  average for this image's primary objects: 0.300778592956
+  average for all of this image's objects:  0.215271917475
+
+imageID: 0a4bbc29780870e6fb04a220d4e51aca
+  sand: 0.473079409766
+ *man: 0.0
+  sky: 0.0
+ *boat: 0.133378996816
+ *tent: 0.0
+  average for this image's primary objects: 0.0444596656052
+  average for all of this image's objects:  0.121291681316
+
+imageID: 000a4e16941669737f537d759f10ae8a
+ *circle: 0.27039505145
+ *soon: 0.0
+ *coming: 0.654258921416
+  average for this image's primary objects: 0.308217990955
+  average for all of this image's objects:  0.308217990955
