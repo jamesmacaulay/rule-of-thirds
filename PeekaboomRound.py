@@ -52,7 +52,10 @@ class PeekaboomRound():
     return PointCluster(self.blobPoints())
     
   def merge(self, others):
-    """takes other PeekaboomRounds and returns a new PeekaboomRound with properties of this one and the events from all"""
+    """
+    takes other PeekaboomRounds and returns a new PeekaboomRound with
+    properties of this one and the events from all
+    """
     merged = copy.deepcopy(self)
     if not isinstance(others,list):
       others = [others]

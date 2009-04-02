@@ -16,7 +16,10 @@ class PointCluster(list):
     return Point2((averages[0] / len(self)), (averages[1] / len(self)))
   
   def lengthAxis(self):
-    """returns a LineSegment2 representing the most distant pair of points in this cluster"""
+    """
+    returns a LineSegment2 representing the most distant pair of points
+    in this cluster
+    """
     maxSegment = None
     for i in range(0, len(self)):
       for j in range((i + 1), len(self)):
@@ -26,7 +29,11 @@ class PointCluster(list):
     return maxSegment
     
   def widthAxis(self):
-    """returns a LineSegment2 perpendicular to self.lengthAxis(), spanning the width of the cluster at a point on the lengthAxis() halfway between the two furthest points' closest points on the lengthAxis()"""
+    """
+    returns a LineSegment2 perpendicular to self.lengthAxis(), spanning
+    the width of the cluster at a point on the lengthAxis() halfway
+    between the two furthest points' closest points on the lengthAxis()
+    """
     lengthAxis = self.lengthAxis()
     lengthAxisHalfway = self.__halfwayPoint(lengthAxis)
     
@@ -53,7 +60,10 @@ class PointCluster(list):
     return LineSegment2(*endpoints)
   
   def elongation(self):
-    """returns between 0.0 and 1.0 proportional to how elongated the cluster is"""
+    """
+    returns between 0.0 and 1.0 proportional to how elongated the
+    cluster is
+    """
     if self.widthAxis().length == 0:
       return 1.0
     else:
@@ -64,6 +74,9 @@ class PointCluster(list):
     return LineSegment2(segment.p1, (segment.v / 2)).p2
   
   def __sideOfLine(self, point, segment):
-    """takes a Point2 and a LineSegment2 and returns 0 if the point is on one side of the line and 1 if it's on the other"""
+    """
+    takes a Point2 and a LineSegment2 and returns 0 if the point is on
+    one side of the line and 1 if it's on the other
+    """
     second_step = segment.p2.connect(point)
     return int(segment.v.cross().dot(second_step.v) > 0)

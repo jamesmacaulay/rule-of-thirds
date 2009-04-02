@@ -77,11 +77,17 @@ class Photographer():
     self.peekaboomRound = peekaboomRound
   
   def relativeCluster(self):
-    """returns a PointCluster from self.peekaboomRound transformed into relative co-ordinates between 0.0 and 1.0"""
+    """
+    returns a PointCluster from self.peekaboomRound transformed into
+    relative co-ordinates between 0.0 and 1.0
+    """
     return PointCluster(map((lambda p: self.relativePoint(p)), self.peekaboomRound.cluster()))
   
   def ruleOfThirds(self):
-    """returns a confidence value for the object of the PeekaboomRound adhering to the rule of thirds in the image"""
+    """
+    returns a confidence value for the object of the PeekaboomRound
+    adhering to the rule of thirds in the image
+    """
     lineMatches = map((lambda line: self.clusterIsAlongLine(line)), self.gridlines)
     maxLineMatch = max(lineMatches)
     
@@ -92,15 +98,27 @@ class Photographer():
     return self.weightedAverage(pointLineBalance, maxPointMatch, maxLineMatch)
   
   def relativeRotationalAlignment(self, rotation):
-    """takes a rotation in degrees and returns its inverse relativized value between 0 and maxRotation (return value goes up as rotation goes down)"""
+    """
+    takes a rotation in degrees and returns its inverse relativized
+    value between 0 and maxRotation (return value goes up as rotation
+    goes down)
+    """
     return self.squishUp(1.0 - self.relativize(rotation, 0.0, self.maxRotation))
 
   def relativeProximity(self, distance):
-    """takes a distance and returns the inverse of its relatived value between 0 and maxDistance (return value goes up when distance goes down)"""
+    """
+    takes a distance and returns the inverse of its relatived value
+    between 0 and maxDistance (return value goes up when distance goes
+    down)
+    """
     return self.squishUp(1.0 - self.relativize(distance, 0.0, self.maxDistance))
   
   def relativize(self, var, extremeA, extremeB):
-    """takes a variable and two extremes, and returns a relative value between 0.0 and 1.0 depending on where the variable is situated between the extremes"""
+    """
+    takes a variable and two extremes, and returns a relative value
+    between 0.0 and 1.0 depending on where the variable is situated
+    between the extremes
+    """
     minExtreme = min(extremeA, extremeB)
     maxExtreme = max(extremeA, extremeB)
     if (var >= maxExtreme):
@@ -114,18 +132,25 @@ class Photographer():
     """
       inverse of relativize()
       
-      returns a weighted average between two extremes where balance is between 0.0 and 1.0
+      returns a weighted average between two extremes where balance is
+      between 0.0 and 1.0
     """
     difference = abs(extremeA - extremeB)
     offset = balance * difference
     return ((extremeA - offset), (extremeA + offset))[extremeA < extremeB]
   
   def clusterIsAtPoint(self, point):
-    """returns a value between 0.0 and 1.0 representing how much the cluster is located at a particular point"""
+    """
+    returns a value between 0.0 and 1.0 representing how much the
+    cluster is located at a particular point
+    """
     return self.relativeProximity(self.relativeCluster().centre().distance(point))
   
   def clusterIsAlongLine(self, line):
-    """returns a value between 0.0 and 1.0 representing how much the cluster is located along a particular line"""
+    """
+    returns a value between 0.0 and 1.0 representing how much the
+    cluster is located along a particular line
+    """
     cluster = self.relativeCluster()
     clusterAxis = cluster.lengthAxis()
     distanceToLine = self.relativeProximity(cluster.centre().distance(line))
@@ -142,7 +167,10 @@ class Photographer():
     return radians
     
   def relativePoint(self, p):
-    """takes in a point and returns a new point with co-ordinates between 0.0 and 1.0, relative to the image height and width"""
+    """
+    takes in a point and returns a new point with co-ordinates between
+    0.0 and 1.0, relative to the image height and width
+    """
     width = self.peekaboomRound.imageWidth
     height = self.peekaboomRound.imageHeight
     x = self.relativize(p.x, 0.0, width)
@@ -155,7 +183,10 @@ class Photographer():
   #   return 1.0 - math.log(newV,11)
   
   def squishUp(self,v):
-    """takes in a number between 0.0 and 1.0 and applies a log function which bunches the distribution towards 1.0"""
+    """
+    takes in a number between 0.0 and 1.0 and applies a log function
+    which bunches the distribution towards 1.0
+    """
     newV = (v * 10) + 1
     return math.log(newV,11)
 

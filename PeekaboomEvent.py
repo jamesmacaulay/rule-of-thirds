@@ -1,7 +1,10 @@
 from PointCluster import *
 
 class PeekaboomEvent():
-  """represents an event in a PeekaboomRound. should not be initialized by the user."""
+  """
+    Represents an event in a PeekaboomRound. Should not be initialized
+    by the user.
+  """
   
   def __init__(self, data):
     """takes a data list produced by PeekaboomRound"""
