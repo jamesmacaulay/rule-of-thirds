@@ -38,21 +38,52 @@
 <font color="#000000" face="helvetica, arial"><a name="Photographer">class <strong>Photographer</strong></a></font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt>The&nbsp;<a href="#Photographer">Photographer</a>&nbsp;class&nbsp;is&nbsp;initialized&nbsp;with&nbsp;a&nbsp;PeekaboomRound&nbsp;object&nbsp;and&nbsp;is&nbsp;responsible&nbsp;for&nbsp;evaluating&nbsp;a&nbsp;single&nbsp;object's&nbsp;adherence&nbsp;to&nbsp;the&nbsp;rule&nbsp;of&nbsp;thirds.&nbsp;This&nbsp;returned&nbsp;through&nbsp;the&nbsp;<a href="#Photographer">Photographer</a>'s&nbsp;<a href="#Photographer-ruleOfThirds">ruleOfThirds</a>()&nbsp;method&nbsp;as&nbsp;a&nbsp;value&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0.<br>
+<td colspan=2><tt>The&nbsp;<a href="#Photographer">Photographer</a>&nbsp;class&nbsp;is&nbsp;initialized&nbsp;with&nbsp;a&nbsp;PeekaboomRound&nbsp;object<br>
+and&nbsp;is&nbsp;responsible&nbsp;for&nbsp;evaluating&nbsp;a&nbsp;single&nbsp;object's&nbsp;adherence&nbsp;to<br>
+the&nbsp;rule&nbsp;of&nbsp;thirds.&nbsp;This&nbsp;returned&nbsp;through&nbsp;the&nbsp;<a href="#Photographer">Photographer</a>'s<br>
+<a href="#Photographer-ruleOfThirds">ruleOfThirds</a>()&nbsp;method&nbsp;as&nbsp;a&nbsp;value&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0.<br>
 &nbsp;<br>
-The&nbsp;<a href="#Photographer">Photographer</a>&nbsp;considers&nbsp;the&nbsp;image&nbsp;to&nbsp;be&nbsp;squashed&nbsp;into&nbsp;a&nbsp;square;&nbsp;that&nbsp;is,&nbsp;(x,y)&nbsp;co-ordinates&nbsp;are&nbsp;always&nbsp;expressed&nbsp;by&nbsp;the&nbsp;<a href="#Photographer">Photographer</a>&nbsp;as&nbsp;values&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0,&nbsp;where&nbsp;1.0&nbsp;is&nbsp;equal&nbsp;to&nbsp;the&nbsp;width&nbsp;or&nbsp;height&nbsp;of&nbsp;the&nbsp;image&nbsp;respectively.&nbsp;This&nbsp;is&nbsp;to&nbsp;ensure&nbsp;that&nbsp;proximities&nbsp;are&nbsp;evaluated&nbsp;relative&nbsp;to&nbsp;the&nbsp;image&nbsp;as&nbsp;a&nbsp;whole&nbsp;and&nbsp;that&nbsp;the&nbsp;focus&nbsp;is&nbsp;on&nbsp;the&nbsp;vertical&nbsp;and&nbsp;horizontal&nbsp;rhythms&nbsp;rather&nbsp;than&nbsp;absolute&nbsp;pixel&nbsp;values.<br>
+&nbsp;The&nbsp;<a href="#Photographer">Photographer</a>&nbsp;considers&nbsp;the&nbsp;image&nbsp;to&nbsp;be&nbsp;squashed&nbsp;into&nbsp;a&nbsp;square;<br>
+that&nbsp;is,&nbsp;(x,y)&nbsp;co-ordinates&nbsp;are&nbsp;always&nbsp;expressed&nbsp;by&nbsp;the<br>
+<a href="#Photographer">Photographer</a>&nbsp;as&nbsp;values&nbsp;between&nbsp;0.0&nbsp;and&nbsp;1.0,&nbsp;where&nbsp;1.0&nbsp;is&nbsp;equal&nbsp;to<br>
+the&nbsp;width&nbsp;or&nbsp;height&nbsp;of&nbsp;the&nbsp;image&nbsp;respectively.&nbsp;This&nbsp;is&nbsp;to&nbsp;ensure<br>
+that&nbsp;proximities&nbsp;are&nbsp;evaluated&nbsp;relative&nbsp;to&nbsp;the&nbsp;image&nbsp;as&nbsp;a&nbsp;whole&nbsp;and<br>
+that&nbsp;the&nbsp;focus&nbsp;is&nbsp;on&nbsp;the&nbsp;vertical&nbsp;and&nbsp;horizontal&nbsp;rhythms&nbsp;rather<br>
+than&nbsp;absolute&nbsp;pixel&nbsp;values.<br>
 &nbsp;<br>
-The&nbsp;ruleOfThirds&nbsp;method&nbsp;ends&nbsp;up&nbsp;taking&nbsp;into&nbsp;account&nbsp;two&nbsp;different&nbsp;factors&nbsp;and&nbsp;returns&nbsp;a&nbsp;weighted&nbsp;average&nbsp;of&nbsp;them:<br>
+&nbsp;The&nbsp;ruleOfThirds&nbsp;method&nbsp;ends&nbsp;up&nbsp;taking&nbsp;into&nbsp;account&nbsp;two&nbsp;different<br>
+factors&nbsp;and&nbsp;returns&nbsp;a&nbsp;weighted&nbsp;average&nbsp;of&nbsp;them:<br>
 &nbsp;<br>
-The&nbsp;first&nbsp;factor&nbsp;is&nbsp;based&nbsp;on&nbsp;the&nbsp;<a href="#Photographer-clusterIsAlongLine">clusterIsAlongLine</a>()&nbsp;method,&nbsp;which&nbsp;checks&nbsp;the&nbsp;PeekaboomRound's&nbsp;cluster&nbsp;of&nbsp;points&nbsp;against&nbsp;one&nbsp;of&nbsp;the&nbsp;<a href="#Photographer">Photographer</a>'s&nbsp;gridlines&nbsp;and&nbsp;returns&nbsp;a&nbsp;value&nbsp;closer&nbsp;to&nbsp;1.0&nbsp;when&nbsp;the&nbsp;lengthAxis()&nbsp;of&nbsp;the&nbsp;PointCluster&nbsp;is&nbsp;both&nbsp;close&nbsp;in&nbsp;distance&nbsp;and&nbsp;similar&nbsp;in&nbsp;rotation&nbsp;to&nbsp;the&nbsp;gridline.<br>
+&nbsp;The&nbsp;first&nbsp;factor&nbsp;is&nbsp;based&nbsp;on&nbsp;the&nbsp;<a href="#Photographer-clusterIsAlongLine">clusterIsAlongLine</a>()&nbsp;method,<br>
+which&nbsp;checks&nbsp;the&nbsp;PeekaboomRound's&nbsp;cluster&nbsp;of&nbsp;points&nbsp;against&nbsp;one&nbsp;of<br>
+the&nbsp;<a href="#Photographer">Photographer</a>'s&nbsp;gridlines&nbsp;and&nbsp;returns&nbsp;a&nbsp;value&nbsp;closer&nbsp;to&nbsp;1.0&nbsp;when<br>
+the&nbsp;lengthAxis()&nbsp;of&nbsp;the&nbsp;PointCluster&nbsp;is&nbsp;both&nbsp;close&nbsp;in&nbsp;distance&nbsp;and<br>
+similar&nbsp;in&nbsp;rotation&nbsp;to&nbsp;the&nbsp;gridline.<br>
 &nbsp;<br>
-The&nbsp;second&nbsp;factor&nbsp;is&nbsp;returned&nbsp;by&nbsp;the&nbsp;<a href="#Photographer-clusterIsAtPoint">clusterIsAtPoint</a>()&nbsp;method,&nbsp;which&nbsp;returns&nbsp;a&nbsp;value&nbsp;closer&nbsp;to&nbsp;1.0&nbsp;when&nbsp;the&nbsp;PointCluster&nbsp;is&nbsp;close&nbsp;in&nbsp;distance&nbsp;to&nbsp;a&nbsp;given&nbsp;intersection.<br>
+&nbsp;The&nbsp;second&nbsp;factor&nbsp;is&nbsp;returned&nbsp;by&nbsp;the&nbsp;<a href="#Photographer-clusterIsAtPoint">clusterIsAtPoint</a>()&nbsp;method,<br>
+which&nbsp;returns&nbsp;a&nbsp;value&nbsp;closer&nbsp;to&nbsp;1.0&nbsp;when&nbsp;the&nbsp;PointCluster&nbsp;is&nbsp;close<br>
+in&nbsp;distance&nbsp;to&nbsp;a&nbsp;given&nbsp;intersection.<br>
 &nbsp;<br>
-The&nbsp;<a href="#Photographer">Photographer</a>&nbsp;checks&nbsp;the&nbsp;output&nbsp;of&nbsp;<a href="#Photographer-clusterIsAlongLine">clusterIsAlongLine</a>()&nbsp;for&nbsp;each&nbsp;of&nbsp;the&nbsp;gridlines,&nbsp;and&nbsp;checks&nbsp;the&nbsp;output&nbsp;of&nbsp;<a href="#Photographer-clusterIsAtPoint">clusterIsAtPoint</a>()&nbsp;for&nbsp;each&nbsp;of&nbsp;the&nbsp;gridline&nbsp;intersections.&nbsp;Only&nbsp;the&nbsp;maximum&nbsp;of&nbsp;these&nbsp;two&nbsp;sets&nbsp;of&nbsp;values&nbsp;are&nbsp;considered,&nbsp;since&nbsp;the&nbsp;<a href="#Photographer">Photographer</a>&nbsp;only&nbsp;cares&nbsp;about&nbsp;the&nbsp;gridline&nbsp;and/or&nbsp;intersection&nbsp;of&nbsp;best&nbsp;fit&nbsp;for&nbsp;the&nbsp;cluster.<br>
+&nbsp;The&nbsp;<a href="#Photographer">Photographer</a>&nbsp;checks&nbsp;the&nbsp;output&nbsp;of&nbsp;<a href="#Photographer-clusterIsAlongLine">clusterIsAlongLine</a>()&nbsp;for<br>
+each&nbsp;of&nbsp;the&nbsp;gridlines,&nbsp;and&nbsp;checks&nbsp;the&nbsp;output&nbsp;of&nbsp;<a href="#Photographer-clusterIsAtPoint">clusterIsAtPoint</a>()<br>
+for&nbsp;each&nbsp;of&nbsp;the&nbsp;gridline&nbsp;intersections.&nbsp;Only&nbsp;the&nbsp;maximum&nbsp;of&nbsp;these<br>
+two&nbsp;sets&nbsp;of&nbsp;values&nbsp;are&nbsp;considered,&nbsp;since&nbsp;the&nbsp;<a href="#Photographer">Photographer</a>&nbsp;only<br>
+cares&nbsp;about&nbsp;the&nbsp;gridline&nbsp;and/or&nbsp;intersection&nbsp;of&nbsp;best&nbsp;fit&nbsp;for&nbsp;the<br>
+cluster.<br>
 &nbsp;<br>
-The&nbsp;return&nbsp;value&nbsp;of&nbsp;the&nbsp;PointCluster's&nbsp;elongation()&nbsp;method&nbsp;is&nbsp;then&nbsp;used&nbsp;as&nbsp;the&nbsp;balance&nbsp;for&nbsp;weighting&nbsp;the&nbsp;two&nbsp;maximums.&nbsp;This&nbsp;means&nbsp;that,&nbsp;for&nbsp;clusters&nbsp;of&nbsp;points&nbsp;which&nbsp;are&nbsp;more&nbsp;elongated,&nbsp;the&nbsp;<a href="#Photographer">Photographer</a>&nbsp;will&nbsp;care&nbsp;more&nbsp;about&nbsp;the&nbsp;cluster&nbsp;being&nbsp;along&nbsp;a&nbsp;gridline&nbsp;than&nbsp;about&nbsp;its&nbsp;centre&nbsp;being&nbsp;close&nbsp;to&nbsp;one&nbsp;of&nbsp;the&nbsp;intersections.<br>
+&nbsp;The&nbsp;return&nbsp;value&nbsp;of&nbsp;the&nbsp;PointCluster's&nbsp;elongation()&nbsp;method&nbsp;is&nbsp;then<br>
+used&nbsp;as&nbsp;the&nbsp;balance&nbsp;for&nbsp;weighting&nbsp;the&nbsp;two&nbsp;maximums.&nbsp;This&nbsp;means<br>
+that,&nbsp;for&nbsp;clusters&nbsp;of&nbsp;points&nbsp;which&nbsp;are&nbsp;more&nbsp;elongated,&nbsp;the<br>
+<a href="#Photographer">Photographer</a>&nbsp;will&nbsp;care&nbsp;more&nbsp;about&nbsp;the&nbsp;cluster&nbsp;being&nbsp;along&nbsp;a<br>
+gridline&nbsp;than&nbsp;about&nbsp;its&nbsp;centre&nbsp;being&nbsp;close&nbsp;to&nbsp;one&nbsp;of&nbsp;the<br>
+intersections.<br>
 &nbsp;<br>
-The&nbsp;<a href="#Photographer">Photographer</a>'s&nbsp;maxDistance&nbsp;property&nbsp;is&nbsp;the&nbsp;maximum&nbsp;distance&nbsp;for&nbsp;which&nbsp;one&nbsp;point&nbsp;can&nbsp;be&nbsp;considered&nbsp;"close&nbsp;to"&nbsp;another.&nbsp;The&nbsp;maxDistance&nbsp;property&nbsp;has&nbsp;been&nbsp;set&nbsp;to&nbsp;one&nbsp;ninth&nbsp;of&nbsp;the&nbsp;width/height&nbsp;of&nbsp;the&nbsp;image.&nbsp;Similarly,&nbsp;the&nbsp;maxRotation&nbsp;property&nbsp;is&nbsp;the&nbsp;maximum&nbsp;rotation&nbsp;for&nbsp;which&nbsp;a&nbsp;line&nbsp;can&nbsp;be&nbsp;considered&nbsp;at&nbsp;all&nbsp;"aligned&nbsp;with"&nbsp;another&nbsp;line,&nbsp;and&nbsp;it&nbsp;has&nbsp;been&nbsp;set&nbsp;to&nbsp;30&nbsp;degrees&nbsp;(pi/6&nbsp;radians).<br>&nbsp;</tt></td></tr>
+&nbsp;The&nbsp;<a href="#Photographer">Photographer</a>'s&nbsp;maxDistance&nbsp;property&nbsp;is&nbsp;the&nbsp;maximum&nbsp;distance<br>
+for&nbsp;which&nbsp;one&nbsp;point&nbsp;can&nbsp;be&nbsp;considered&nbsp;"close&nbsp;to"&nbsp;another.&nbsp;The<br>
+maxDistance&nbsp;property&nbsp;has&nbsp;been&nbsp;set&nbsp;to&nbsp;one&nbsp;ninth&nbsp;of&nbsp;the&nbsp;width/height<br>
+of&nbsp;the&nbsp;image.&nbsp;Similarly,&nbsp;the&nbsp;maxRotation&nbsp;property&nbsp;is&nbsp;the&nbsp;maximum<br>
+rotation&nbsp;for&nbsp;which&nbsp;a&nbsp;line&nbsp;can&nbsp;be&nbsp;considered&nbsp;at&nbsp;all&nbsp;"aligned&nbsp;with"<br>
+another&nbsp;line,&nbsp;and&nbsp;it&nbsp;has&nbsp;been&nbsp;set&nbsp;to&nbsp;30&nbsp;degrees&nbsp;(pi/6&nbsp;radians).<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="Photographer-__init__"><strong>__init__</strong></a>(self, peekaboomRound)</dt></dl>

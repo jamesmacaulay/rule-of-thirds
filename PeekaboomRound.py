@@ -4,11 +4,23 @@ import copy
 
 class PeekaboomRound():
   """
-    Represents one round of play: an exchange between a peek player and a boom player concerning a single object. A PeekaboomRound is initialized with one line of data from a .pkb file. The initializer parses the line and assigns properties to the PeekaboomRound instance accordingly.
+    Represents one round of play: an exchange between a peek player and
+    a boom player concerning a single object. A PeekaboomRound is
+    initialized with one line of data from a .pkb file. The initializer
+    parses the line and assigns properties to the PeekaboomRound
+    instance accordingly.
     
-    Events are stored as PeekaboomEvents, and blob events can be accessed independently with the blobs() method. The Point2 objects (from the euclid module) associated with those blob events can be accessed with blobPoints(), and a PointCluster object can be generated from those points with the cluster() method.
+     Events are stored as PeekaboomEvents, and blob events can be
+    accessed independently with the blobs() method. The Point2 objects
+    (from the euclid module) associated with those blob events can be
+    accessed with blobPoints(), and a PointCluster object can be
+    generated from those points with the cluster() method.
     
-    The merge() method is used to non-destructively join multiple PeekaboomRound objects into a single object. The resulting object ends up representing the events from multiple rounds of play and is useful for initializing a Photographer object with all the data for a particular label in an image.
+     The merge() method is used to non-destructively join multiple
+    PeekaboomRound objects into a single object. The resulting object
+    ends up representing the events from multiple rounds of play and is
+    useful for initializing a Photographer object with all the data for
+    a particular label in an image.
   """
   
   def __init__(self, data):

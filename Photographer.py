@@ -3,21 +3,52 @@ import math
 
 class Photographer():
   """
-    The Photographer class is initialized with a PeekaboomRound object and is responsible for evaluating a single object's adherence to the rule of thirds. This returned through the Photographer's ruleOfThirds() method as a value between 0.0 and 1.0.
+    The Photographer class is initialized with a PeekaboomRound object
+    and is responsible for evaluating a single object's adherence to
+    the rule of thirds. This returned through the Photographer's
+    ruleOfThirds() method as a value between 0.0 and 1.0.
     
-    The Photographer considers the image to be squashed into a square; that is, (x,y) co-ordinates are always expressed by the Photographer as values between 0.0 and 1.0, where 1.0 is equal to the width or height of the image respectively. This is to ensure that proximities are evaluated relative to the image as a whole and that the focus is on the vertical and horizontal rhythms rather than absolute pixel values.
+     The Photographer considers the image to be squashed into a square;
+    that is, (x,y) co-ordinates are always expressed by the
+    Photographer as values between 0.0 and 1.0, where 1.0 is equal to
+    the width or height of the image respectively. This is to ensure
+    that proximities are evaluated relative to the image as a whole and
+    that the focus is on the vertical and horizontal rhythms rather
+    than absolute pixel values.
     
-    The ruleOfThirds method ends up taking into account two different factors and returns a weighted average of them:
+     The ruleOfThirds method ends up taking into account two different
+    factors and returns a weighted average of them:
     
-    The first factor is based on the clusterIsAlongLine() method, which checks the PeekaboomRound's cluster of points against one of the Photographer's gridlines and returns a value closer to 1.0 when the lengthAxis() of the PointCluster is both close in distance and similar in rotation to the gridline.
+     The first factor is based on the clusterIsAlongLine() method,
+    which checks the PeekaboomRound's cluster of points against one of
+    the Photographer's gridlines and returns a value closer to 1.0 when
+    the lengthAxis() of the PointCluster is both close in distance and
+    similar in rotation to the gridline.
     
-    The second factor is returned by the clusterIsAtPoint() method, which returns a value closer to 1.0 when the PointCluster is close in distance to a given intersection.
+     The second factor is returned by the clusterIsAtPoint() method,
+    which returns a value closer to 1.0 when the PointCluster is close
+    in distance to a given intersection.
     
-    The Photographer checks the output of clusterIsAlongLine() for each of the gridlines, and checks the output of clusterIsAtPoint() for each of the gridline intersections. Only the maximum of these two sets of values are considered, since the Photographer only cares about the gridline and/or intersection of best fit for the cluster.
+     The Photographer checks the output of clusterIsAlongLine() for
+    each of the gridlines, and checks the output of clusterIsAtPoint()
+    for each of the gridline intersections. Only the maximum of these
+    two sets of values are considered, since the Photographer only
+    cares about the gridline and/or intersection of best fit for the
+    cluster.
     
-    The return value of the PointCluster's elongation() method is then used as the balance for weighting the two maximums. This means that, for clusters of points which are more elongated, the Photographer will care more about the cluster being along a gridline than about its centre being close to one of the intersections.
+     The return value of the PointCluster's elongation() method is then
+    used as the balance for weighting the two maximums. This means
+    that, for clusters of points which are more elongated, the
+    Photographer will care more about the cluster being along a
+    gridline than about its centre being close to one of the
+    intersections.
     
-    The Photographer's maxDistance property is the maximum distance for which one point can be considered "close to" another. The maxDistance property has been set to one ninth of the width/height of the image. Similarly, the maxRotation property is the maximum rotation for which a line can be considered at all "aligned with" another line, and it has been set to 30 degrees (pi/6 radians).
+     The Photographer's maxDistance property is the maximum distance
+    for which one point can be considered "close to" another. The
+    maxDistance property has been set to one ninth of the width/height
+    of the image. Similarly, the maxRotation property is the maximum
+    rotation for which a line can be considered at all "aligned with"
+    another line, and it has been set to 30 degrees (pi/6 radians).
   """
   
   # max distance for a point to be near another one,
